@@ -83,11 +83,7 @@ p{
 }
 .d2{
   position: relative;
-<<<<<<< HEAD
   top:600px; /*Edited this line*/
-=======
-  top:600px;
->>>>>>> 61ae83fc2873a91be7c430e7f95b5a14b455ac6c
   right:500px;
 }
 .g{
