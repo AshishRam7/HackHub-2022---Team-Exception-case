@@ -38,9 +38,12 @@
       h1{
         font-family: 'DM Sans', sans-serif;
       }
+      h2{
+        font-family: 'DM Sans', sans-serif;
+      }
       
     </style>
-
+    {% if res == 'paddy' %}
     <div class="paddy">
       <h1>Paddy</h1>
       <h2 >LAND PREPARATION<br />
@@ -115,8 +118,11 @@ Reap the yield once the panicles are developing fully as well as the crops get c
   </h2>
 
 </div>
+
 <!-- --------------------------------------------------------------- -->
+{% elif res == 'wheat' %}
 <div >
+
   <h1>Wheat</h1>
   <h2 >LAND PREPARATION<br />
     After harvest of previous crop, the field should be ploughed with disc or mould board plough. Field is usually prepared by giving one deep plough with iron plough followed by two or three times local plough and planking. Carried out plough in evening time and kept furrow open whole night to absorb some moisture from dew. Planking should be done after each plough early in the morning.
@@ -168,8 +174,9 @@ Harvesting of high yielding dwarf variety is carried out when leaves and stem tu
 </h2>
 
 </div>
-<!-- --------------------------------------------------------------- -->
 
+<!-- --------------------------------------------------------------- -->
+{% elif res == 'maize' %}
 <div class="paddy">
   <h1>Maize</h1>
   <h2 >LAND PREPARATION<br />
@@ -242,7 +249,9 @@ Apply irrigation immediately after sowing. Based upon soil type, on third or fou
 
 <br />HARVESTING<br />
 Harvesting should be done when cobs outer cover turns from green to white. The optimum time of harvesting maize is when the stalks have dried and moisture of grain as about 17-20%. Drying place or equipment should be dry, clean and disinfected.
+
 <!-- --------------------------------------------------------------- -->
+{% elif res == 'cotton' %}
 <div class="paddy">
   <h1>Cotton</h1>
   LAND PREPARATION<br />
@@ -304,8 +313,10 @@ Fertilizer Requirement (kg/acre)<br />
 <br />HARVESTING<br />
 Picking of bolls should be done when bolls are fully mature. Avoid picking of wet bolls, pick cotton free from dry leaves trash. Damaged boll should be picked separately and discarded for seed purpose. The first and last picking are usually of low quality and should not be mixed with rest of the produce to fetch better price. Pick boll should be clean and dry to get good price. Do picking when there is no dew. Picking should be regularly done after every 7-8 days to avoid losses incurred due to fall of the cotton on ground. Delay in picking leads to falling of cotton on the ground which results in deterioration of quality. Harvest the American cotton at the interval of 15-20days and Desi cotton at 8-10 days interval. The picked kapas should be properly cleaned before taking to the market for sale.<br>
 <!-- --------------------------------------------------------------- -->
+{% else %}
 <div class="paddy">
   <h1>Jowar</h1>
+  <h2>
   LAND PREPARATION<br />
     Give one deep ploughing every year in shallow to medium deep soil. Give one to two ploughing followed by 2 criss-cross harrowing. Prepare land in such a way that water stagnation will not occurrs in field.
 SOWING<br />
@@ -369,7 +380,9 @@ The right time for harvest is when grains become hard and contain less than 25% 
 
 
     </div>
-    Result : {{result}}
+    
+    {% endif %}
+    <!-- Result : {{result}} -->
 
   </body>
 </html>
