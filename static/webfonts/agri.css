@@ -1,0 +1,135 @@
+.container{
+  width:100%;
+  height:100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(https://climate.copernicus.eu/sites/default/files/styles/hero_image_extra_large_2x/public/2018-07/globalagriculture.jpg?itok=fUmFHs6s);
+  background-position:center;
+  background-size: cover;
+}
+body {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px
+}
+.banner{
+  width:85%;
+  margin:auto;
+  padding:35px 0;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+
+}
+.banner ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+*{
+  margin: 0;
+  padding:0;
+
+}
+
+.logo1 {
+    height: 50px;
+    position: relative;
+    right:700px;
+}
+h1{
+  font-size: 5rem;
+  text-align: left;
+  font-family: 'DM Sans', sans-serif;
+  padding: 7% 15%;
+  padding-bottom: 0px;
+  padding-left: 120px;
+  color: white;
+  transition:1s;
+}
+h1:hover{
+  -webkit-text-stroke:2px #fff;
+  color:transparent;
+}
+p{
+  text-align: left;
+  font-family: 'DM Sans', sans-serif;
+  padding: 7% 15%;
+  padding-left: 120px;
+  color: white;
+  padding-top:25px;
+
+}
+.heading{
+  font-family: 'DM Sans', sans-serif;
+  font-size: 7rem;
+  text-align: right;
+  color:white;
+  position: relative;
+  right:18%;
+  bottom:40%;
+}
+
+.second{
+  background-color: white;
+
+}
+.d{
+  height:30%;
+  width:30%;
+  position: relative;
+  left:1200px;
+  top:150px;
+}
+.d2{
+  position: relative;
+  top:700px;
+  right:500px;
+}
+.g{
+  color:#4AA96C;
+  font-family: 'DM Sans', sans-serif;
+  position:relative;
+  bottom:300px;
+  left:250px;
+  font-size: 2rem;
+}
+.g2{
+  color:#4AA96C;
+  font-family: 'DM Sans', sans-serif;
+  position:relative;
+  left:1000px;
+  bottom:120px;
+  font-size: 2rem;
+}
+html,body{
+  width:100%;
+  height:100%;
+  margin:0px;
+  padding:0px;
+  overflow-x: hidden;
+
+}
+#end{
+  background-color: #4AA96C;
+  padding-bottom: 10px;;
+}
+.e{
+  color: white;
+  text-align: center;
+  font-family: 'DM Sans', sans-serif;
+
+  padding-top: 1%;
+  font-size: 2rem;
+
+}
+.socials{
+  text-align: center;
+  justify-content: center;
+  display:flex;
+  margin:1rem 0 3rem 0;
+  list-style: none;
+}
+.socials li{
+  margin:0 10px;
+}

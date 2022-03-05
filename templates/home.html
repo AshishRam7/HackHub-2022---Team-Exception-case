@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Hello {{name}}</h1>
+
+
+
+<form action="add" method="post">
+
+    {% csrf_token %}
+    Enter soil: <input type="text" name='soil'><br>
+    Enter month: <input type="text" name='month'><br>
+    Enter PH: <input type="text" name='ph'><br>
+    Enter Temp: <input type="text" name='temp'><br>
+    Enter Rainfall: <input type="text" name='rainfall'><br>
+
+    <input type="submit">
+</form>
+
+{% endblock %}
