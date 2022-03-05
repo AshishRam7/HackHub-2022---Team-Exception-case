@@ -81,11 +81,7 @@ p{
   left:1200px;
   top:150px;
 }
-.d2{
-  position: relative;
-  top:600px; /*Edited this line*/
-  right:500px;
-}
+
 .g{
   color:#4AA96C;
   font-family: 'DM Sans', sans-serif;
