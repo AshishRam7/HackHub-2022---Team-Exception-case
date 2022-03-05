@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
+from django.contrib import auth
 
 # Create your views here.
 
@@ -50,9 +51,10 @@ def register(request):
 
 
 def login(request):
+    '''
     if request.method == 'POST':
-        username = request.POST['user_name']
-        password = request.POST['password']
+        username = request.POST.get['user_name']
+        password = request.POST.get['password']
 
         user = authenticate(user_name=username, password=password)
 
@@ -64,12 +66,37 @@ def login(request):
         else:
             print("Invalid duh")
             messages.info(request, 'invalid credentials')
-            return render(request, 'sign in.html')
+            return render(request, 'agri.html')
     else:
         print("Invalid duh2")
-        return render(request, 'sign in.html')
+        return render(request, 'sign.html')
+
+'''
+
+
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = auth.authenticate(username=username, password=password)
+
+        if user is not None:
+            # correct username and password login the user
+            auth.login(request, user)
+            return redirect('agri')
+
+        else:
+            messages.error(request, 'Error wrong username/password')
+
+    return render(request, 'sign in.html')
 
 
 def logout(request):
-    authenticate.logout(request)
-    return redirect('/')
+    auth.logout(request)
+    return render(request,'agri.html')
+
+
+def admin_page(request):
+    if not request.user.is_authenticated():
+        return redirect('sign in.html')
+
+    return render(request,'sign in.html')
