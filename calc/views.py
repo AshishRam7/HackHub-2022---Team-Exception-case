@@ -220,26 +220,26 @@ def add(request):
     # wheat -21-26°C
 
     # checking rainfall:
-    if rainfall >= 20 and temp <= 40:
+    if rainfall >= 20 and rainfall <= 40:
         jowar += 1
         wheat += 1
 
-    elif rainfall > 20 and temp <= 75:
+    elif rainfall > 20 and rainfall <= 75:
         wheat += 1
 
-    elif rainfall > 50 and temp <= 100:
+    elif rainfall > 50 and rainfall <= 100:
         cotton += 1
         maize += 1
 
     elif rainfall > 100:
         paddy += 1
 
-    elif rainfall >= 21 and temp < 25:
+    elif rainfall >= 21 and rainfall < 25:
         wheat += 1
         cotton += 1
         paddy += 1
 
-    elif rainfall> 30 and temp <= 32:
+    elif rainfall> 30 and rainfall <= 32:
         cotton += 1
         jowar += 1
 
