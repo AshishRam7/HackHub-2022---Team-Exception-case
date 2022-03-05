@@ -64,7 +64,7 @@ def login(request):
         else:
             print("Invalid duh")
             messages.info(request, 'invalid credentials')
-            return render(request, 'login.html')
+            return render(request, 'sign in.html')
     else:
         print("Invalid duh2")
         return render(request, 'sign in.html')

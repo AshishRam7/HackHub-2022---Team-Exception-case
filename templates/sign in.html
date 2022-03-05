@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,23 +14,12 @@
       crossorigin="anonymous"
     />
     <style>
-      .gradient-custom {
-        /* fallback for old browsers */
-        background: #6a11cb;
+      body {
+        background: #AAFFA9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #11FFBD, #AAFFA9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #11FFBD, #AAFFA9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-        /* Chrome 10-25, Safari 5.1-6 */
-        background: -webkit-linear-gradient(
-          to right,
-          rgb(77, 245, 77),
-          rgb(18, 117, 9)
-        );
-
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        background: linear-gradient(
-          to right,
-          rgb(56, 228, 33),
-          rgb(44, 143, 14)
-        );
+      
       }
     </style>
   </head>
@@ -39,6 +29,7 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    {% csrf_token %}
 
     <section class="vh-120 gradient-custom">
       <div class="container py-5 h-100">
