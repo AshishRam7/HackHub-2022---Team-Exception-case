@@ -51,7 +51,7 @@
                   <p class="text-white-50 mb-5">
                     Please enter your login and password!
                   </p>
-                  <form action="login" method="'post">
+                  <form action="login" method="post">
                     {% csrf_token %}
 
                   <div class="form-outline form-white mb-4">
@@ -66,8 +66,8 @@
 
                   <div class="form-outline form-white mb-4">
                     <input
-                      type="password1"
-                      id="typePasswordX"
+                      type="password"
+                      name="password"
                       class="form-control form-control-lg" placeholder="Password"
                     />
                     <!-- <label class="form-label" for="typePasswordX"
