@@ -269,4 +269,4 @@ def add(request):
 
     res = max(crops, key=crops.get)
 
-    return render(request, 'result.html', {'result': res})
+    return render(request, 'result.html', {'res': res})
