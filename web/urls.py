@@ -5,7 +5,4 @@ from . import views
 
 urlpatterns =[
     path('', views.agri,name='views'),
-    
-    
-    
 ]
