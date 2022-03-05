@@ -116,6 +116,8 @@ def add(request):
     for i in month_for_each_crop:
         if month in month_for_each_crop[i]:
             crops[i] += 1
+        else:
+            crops[i] -= 5
 
     '''
     if ph>=5 and ph<=9.5:
