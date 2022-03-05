@@ -198,7 +198,7 @@ def add(request):
         cotton += 1
         jowar += 1
 
-    if temp >= 25 and temp <= 30:
+    elif temp >= 25 and temp <= 30:
         cotton += 1
         paddy += 1
         jowar += 1
@@ -227,19 +227,19 @@ def add(request):
     elif rainfall > 20 and temp <= 75:
         wheat += 1
 
-    elif temp > 50 and temp <= 100:
+    elif rainfall > 50 and temp <= 100:
         cotton += 1
         maize += 1
 
-    elif temp > 100:
+    elif rainfall > 100:
         paddy += 1
 
-    elif temp >= 21 and temp < 25:
+    elif rainfall >= 21 and temp < 25:
         wheat += 1
         cotton += 1
         paddy += 1
 
-    elif temp > 30 and temp <= 32:
+    elif rainfall> 30 and temp <= 32:
         cotton += 1
         jowar += 1
 
