@@ -157,7 +157,7 @@
             <form method="post" action="add">
               {% csrf_token %}
 
-              <label>Enter Soil Type</label><br /><br />
+              <label>Choose Soil Type</label><br /><br />
               <select style="width:200px; height:50px; font-size:22.5px; outline: none; border: none; background-color:rgba(113, 239, 19, 0.25); color:white;"name="soil" /><br />
                 <option style="color:black;" value="volvo">loamy</option>
                 <option style="color:black;"value="saab">sand loamy </option>
@@ -169,7 +169,7 @@
                 <option style="color:black;"value="audi">red loamy</option>
               </select><br /><br />
 
-              <label>Enter Season</label><br /><br />
+              <label>Choose Season</label><br /><br />
               <select style="width:200px; height:50px; font-size:22.5px; outline: none; border: none; background-color:rgba(113, 239, 19, 0.25); color:white;" type="text" placeholder="Month" name="month" /><br />
               <option style="color:black;" value="volvo">rabi</option>
               <option style="color:black;"value="saab">kharif</option>
@@ -182,7 +182,7 @@
                 <label for="css">Rabi</label><br>
               </div> -->
 
-              <label>Choose PH</label><br />
+              <label>Enter the pH of soil</label><br />
               <!-- <input type="text" placeholder="PH" name="ph" /><br /> -->
               <input style="font-size:20px;"
                 type="number"
@@ -193,7 +193,7 @@
                 step="0.1"
               /><br />
 
-              <label>Choose the temperature (°C)</label><br />
+              <label>Enter the temperature (°C)</label><br />
               <!-- <input type="text" placeholder="Temperature (Celcius)" name="temp" /><br /> -->
               <input style="font-size:20px;"
                 type="number"
@@ -203,7 +203,7 @@
                 step="1"
               /><br />
 
-              <label>Choose the rainfall (cm)</label><br />
+              <label>Enter the rainfall (cm)</label><br />
               <!-- <input type="text" placeholder="rainfall (cm)" name="rainfall" /><br /> -->
               <input style="font-size:20px;"
                 type="float"
