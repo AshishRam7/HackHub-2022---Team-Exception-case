@@ -196,44 +196,54 @@
             >
           </li>
           {% if user.is_authenticated %}
-          <li style="
-          text-decoration: none;
-          font-size: 1.3rem;
-          color: white;
-          padding-right: 80px;">Hello, {{user.first_name}}</li>
-          <li ><a href="accounts/logout" style="
-            text-decoration: none;
-            font-size: 1.3rem;
-            color: white;
-            padding-right: 80px;">logout</a></li>
+          <li
+            style="
+              text-decoration: none;
+              font-size: 1.3rem;
+              color: white;
+              padding-right: 80px;
+            "
+          >
+            Hello, {{user.first_name}}
+          </li>
+          <li>
+            <a
+              href="accounts/logout"
+              style="
+                text-decoration: none;
+                font-size: 1.3rem;
+                color: white;
+                padding-right: 80px;
+              "
+              >logout</a
+            >
+          </li>
 
-            <li>
-              <a
-                href="accounts/login"
-                style="
-                  text-decoration: none;
-                  font-size: 1.3rem;
-                  color: white;
-                  padding-right: 80px;
-                "
-                >Sign in</a
-              >
-            </li>
-            <li>
-              <a
-                href="accounts/register"
-                style="
-                  text-decoration: none;
-                  font-size: 1.3rem;
-                  color: white;
-                  padding-right: 80px;
-                "
-                >Register</a
-              >
-            </li>
+          <li>
+            <a
+              href="accounts/register"
+              style="
+                text-decoration: none;
+                font-size: 1.3rem;
+                color: white;
+                padding-right: 80px;
+              "
+              >Register</a
+            >
+          </li>
           {% else %}
-
-          
+          <li>
+            <a
+              href="accounts/login"
+              style="
+                text-decoration: none;
+                font-size: 1.3rem;
+                color: white;
+                padding-right: 80px;
+              "
+              >Sign in</a
+            >
+          </li>
           {% endif %}
           <li>
             <a
