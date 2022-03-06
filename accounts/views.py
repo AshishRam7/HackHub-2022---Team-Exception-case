@@ -82,7 +82,7 @@ def login(request):
         if user is not None:
             # correct username and password login the user
             auth.login(request, user)
-            return redirect('agri')
+            return redirect('../')
 
         else:
             messages.error(request, 'Error wrong username/password')
@@ -92,7 +92,7 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
-    return render(request,'agri.html')
+    return render(request, 'agri.html')
 
 
 def admin_page(request):
