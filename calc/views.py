@@ -272,3 +272,7 @@ def add(request):
     res = max(crops, key=crops.get)
 
     return render(request, 'result.html', {'res': res})
+
+
+def labs(request):
+    return render(request, 'pricing.html')
