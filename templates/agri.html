@@ -43,7 +43,7 @@
         margin-left: 0px;
       }
       .banner {
-        width: 85%;
+        width: 95%;
         margin: auto;
         padding: 35px 0;
         display: flex;
@@ -195,6 +195,25 @@
               >Product</a
             >
           </li>
+          <li>
+            <a
+              href="#ab"
+              style="
+                text-decoration: none;
+                font-size: 1.3rem;
+                color: white;
+                padding-right: 80px;
+              "
+              >About us</a
+            >
+          </li>
+          <li>
+            <a
+              href="#end"
+              style="text-decoration: none; font-size: 1.3rem; color: white; padding-right: 80px;"
+              >Contact us</a
+            >
+          </li>
           {% if user.is_authenticated %}
           <li
             style="
@@ -215,13 +234,15 @@
                 color: white;
                 padding-right: 80px;
               "
-              >logout</a
+              >Logout</a
             >
           </li>
 
+          {% else %}
+
           <li>
             <a
-              href="accounts/register"
+              href="../accounts/register"
               style="
                 text-decoration: none;
                 font-size: 1.3rem;
@@ -231,10 +252,10 @@
               >Register</a
             >
           </li>
-          {% else %}
+          
           <li>
             <a
-              href="accounts/login"
+              href="../accounts/login"
               style="
                 text-decoration: none;
                 font-size: 1.3rem;
@@ -245,25 +266,7 @@
             >
           </li>
           {% endif %}
-          <li>
-            <a
-              href="#ab"
-              style="
-                text-decoration: none;
-                font-size: 1.3rem;
-                color: white;
-                padding-right: 80px;
-              "
-              >About us</a
-            >
-          </li>
-          <li>
-            <a
-              href="#end"
-              style="text-decoration: none; font-size: 1.3rem; color: white"
-              >Contact us</a
-            >
-          </li>
+          
         </ul>
       </div>
       <h1>
