@@ -1,0 +1,12 @@
+#Instructions to use  AgroTech:
+
+1.clone the complete repository 
+2.open terminal in VS Code or any other Text Editor and run the command as follows:
+    
+    python manage.py runserver
+    
+    <--- and click Enter --->
+    
+  this should open up the webpage in the browser and now you can refer the demo video to understand how to navigate through the website.
+    
+   
