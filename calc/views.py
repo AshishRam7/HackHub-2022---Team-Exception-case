@@ -1,6 +1,8 @@
 from http.client import HTTPResponse
 from django.shortcuts import render
 from django.http import HttpResponse
+import smtplib
+from email.message import EmailMessage
 
 # Create your views here.
 
@@ -271,7 +273,40 @@ def add(request):
 
     res = max(crops, key=crops.get)
 
+    if res == 'wheat':
+            email_alert("Hey","wheat","jaashishram7@gmail.com")
+        
+    elif res == 'maize':
+            email_alert("Hey","maize","jaashishram7@gmail.com")
+
+    elif res == 'paddy':
+            email_alert("Hey","paddy","jaashishram7@gmail.com")
+            
+    elif res == 'cotton':
+            email_alert("Hey","cotton","jaashishram7@gmail.com")
+    
+    elif res == 'jowar':
+            email_alert("Hey","jowar","jaashishram7@gmail.com")
+
     return render(request, 'result.html', {'res': res})
+    
+
+def email_alert( subject, body, to):
+        msg = EmailMessage()
+        msg.set_content(body)
+        msg['subject'] = subject
+        msg['to'] = to
+
+        user= 'agroxtech22@gmail.com'
+        password= 'hmerhasoomdrgurk'
+        msg['from']= user
+
+        server= smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login(user, password)
+        server.send_message(msg)
+
+        server.quit()
 
 
 def labs(request):
