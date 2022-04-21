@@ -4,7 +4,7 @@ from django.http import HttpResponse
 import smtplib
 from email.message import EmailMessage
 
-from accounts.views import get_email
+
 
 # Create your views here.
 
@@ -276,6 +276,7 @@ def add(request):
     res = max(crops, key=crops.get)
     
     email = request.user.email
+    first_name=request.user.first_name
     print(email)
     
     with open("../templates/result.html") as f:
