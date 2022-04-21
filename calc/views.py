@@ -278,21 +278,23 @@ def add(request):
     email = request.user.email
     print(email)
     
+    with open("../templates/result.html") as f:
+        content = f.read()
 
     if res == 'wheat':
-        email_alert("Hey", "wheat", email)
+        email_alert("Hey", content, email)
 
     elif res == 'maize':
-        email_alert("Hey", "maize", email)
+        email_alert("Hey", content, email)
 
     elif res == 'paddy':
-        email_alert("Hey", "paddy", email)
+        email_alert("Hey", content, email)
 
     elif res == 'cotton':
-        email_alert("Hey", "cotton", email)
+        email_alert("Hey", content, email)
 
     elif res == 'jowar':
-        email_alert("Hey", "jowar", email)
+        email_alert("Hey", content, email)
 
     return render(request, 'result.html', {'res': res})
 
