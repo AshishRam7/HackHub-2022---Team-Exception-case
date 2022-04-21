@@ -283,19 +283,19 @@ def add(request):
         content = f.read()'''
 
     if res == 'wheat':
-        email_alert("Hey", content, email)
+        email_alert("Hey", res, email)
 
     elif res == 'maize':
-        email_alert("Hey", content, email)
+        email_alert("Hey", res, email)
 
     elif res == 'paddy':
-        email_alert("Hey", content, email)
+        email_alert("Hey", res, email)
 
     elif res == 'cotton':
-        email_alert("Hey", content, email)
+        email_alert("Hey", res, email)
 
     elif res == 'jowar':
-        email_alert("Hey", content, email)
+        email_alert("Hey", res, email)
 
     return render(request, 'result.html', {'res': res})
 
