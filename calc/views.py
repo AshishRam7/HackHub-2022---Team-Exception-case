@@ -3,15 +3,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import smtplib
 from email.message import EmailMessage
-from django.contrib import messages
-from django.contrib.auth.models import User
-from django.contrib.auth import authenticate, login
-from django.contrib.auth import logout
-from django.contrib import auth
-from platformdirs import user_log_path
-from accounts.models import UserProfile
-from accounts import email
-    # Create your views here.
+
+from accounts.views import get_email
+
+# Create your views here.
 
 
 def home(request):
@@ -250,7 +245,7 @@ def add(request):
         cotton += 1
         paddy += 1
 
-    elif rainfall> 30 and rainfall <= 32:
+    elif rainfall > 30 and rainfall <= 32:
         cotton += 1
         jowar += 1
 
@@ -298,25 +293,24 @@ def add(request):
             email_alert("Hey",res,"jaashishram7@gmail.com")
 
     return render(request, 'result.html', {'res': res})
-    
-
-def email_alert( subject, body, to):
-        msg = EmailMessage()
-        msg.set_content(body)
-        msg['subject'] = subject
-        msg['to'] = to
-
-        user= 'agroxtech22@gmail.com'
-        password= 'hmerhasoomdrgurk'
-        msg['from']= user
 
 
-        server= smtplib.SMTP('smtp.gmail.com', 587)
-        server.starttls()
-        server.login(user, password)
-        server.send_message(msg)
+def email_alert(subject, body, to):
+    msg = EmailMessage()
+    msg.set_content(body)
+    msg['subject'] = subject
+    msg['to'] = to
 
-        server.quit()
+    user = 'agroxtech22@gmail.com'
+    password = 'hmerhasoomdrgurk'
+    msg['from'] = user
+
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()
+    server.login(user, password)
+    server.send_message(msg)
+
+    server.quit()
 
 
 def labs(request):
