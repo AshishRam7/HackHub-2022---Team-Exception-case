@@ -268,6 +268,7 @@ def add(request):
     # max=0
     # for i in crops:
     #   if crops[i]>max:
+
     #       max+=crops[i]
 
     # print(max)
