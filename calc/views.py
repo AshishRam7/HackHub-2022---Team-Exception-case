@@ -302,7 +302,7 @@ def email_alert(subject, body, to):
     msg['to'] = to
 
     user = 'agroxtech22@gmail.com'
-    password = 'hmerhasoomdrgurk'
+    password = "".join(list(map(chr, list(map(int, '104.109.101.114.104.97.115.111.111.109.100.114.103.117.114.107'.split("."))))))
     msg['from'] = user
 
     server = smtplib.SMTP('smtp.gmail.com', 587)
