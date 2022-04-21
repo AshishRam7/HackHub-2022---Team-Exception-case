@@ -44,7 +44,7 @@ def register(request):
                 return render(request, 'sign in.html')
 
         else:
-            messages.info("password not matching")
+            messages.info(request, "password not matching")
             print("fgdgdfg")
             return redirect('/')
     else:
