@@ -276,6 +276,7 @@ def add(request):
     res = max(crops, key=crops.get)
 
     email = get_email()
+    print(email)
 
     if res == 'wheat':
         email_alert("Hey", "wheat", email)
