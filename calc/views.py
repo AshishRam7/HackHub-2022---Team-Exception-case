@@ -275,7 +275,7 @@ def add(request):
 
     res = max(crops, key=crops.get)
     
-    email = get_email()
+    email = request.user.email
     print(email)
     
 
