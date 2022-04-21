@@ -268,7 +268,6 @@ def add(request):
     # max=0
     # for i in crops:
     #   if crops[i]>max:
-
     #       max+=crops[i]
 
     # print(max)
@@ -276,22 +275,22 @@ def add(request):
 
     res = max(crops, key=crops.get)
 
-    
+    email = get_email()
 
     if res == 'wheat':
-            email_alert("Hey",res,"jaashishram7@gmail.com")
-        
+        email_alert("Hey", "wheat", email)
+
     elif res == 'maize':
-            email_alert("Hey",res,"jaashishram7@gmail.com")
+        email_alert("Hey", "maize", email)
 
     elif res == 'paddy':
-            email_alert("Hey",res,"jaashishram7@gmail.com")
-            
+        email_alert("Hey", "paddy", email)
+
     elif res == 'cotton':
-            email_alert("Hey",res,"jaashishram7@gmail.com")
-    
+        email_alert("Hey", "cotton", email)
+
     elif res == 'jowar':
-            email_alert("Hey",res,"jaashishram7@gmail.com")
+        email_alert("Hey", "jowar", email)
 
     return render(request, 'result.html', {'res': res})
 
