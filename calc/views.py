@@ -4,6 +4,8 @@ from django.http import HttpResponse
 import smtplib
 from email.message import EmailMessage
 
+from accounts.views import get_email
+
 # Create your views here.
 
 
@@ -243,7 +245,7 @@ def add(request):
         cotton += 1
         paddy += 1
 
-    elif rainfall> 30 and rainfall <= 32:
+    elif rainfall > 30 and rainfall <= 32:
         cotton += 1
         jowar += 1
 
@@ -273,40 +275,42 @@ def add(request):
 
     res = max(crops, key=crops.get)
 
+    email = get_email()
+
     if res == 'wheat':
-            email_alert("Hey","wheat","jaashishram7@gmail.com")
-        
+        email_alert("Hey", "wheat", email)
+
     elif res == 'maize':
-            email_alert("Hey","maize","jaashishram7@gmail.com")
+        email_alert("Hey", "maize", email)
 
     elif res == 'paddy':
-            email_alert("Hey","paddy","jaashishram7@gmail.com")
-            
+        email_alert("Hey", "paddy", email)
+
     elif res == 'cotton':
-            email_alert("Hey","cotton","jaashishram7@gmail.com")
-    
+        email_alert("Hey", "cotton", email)
+
     elif res == 'jowar':
-            email_alert("Hey","jowar","jaashishram7@gmail.com")
+        email_alert("Hey", "jowar", email)
 
     return render(request, 'result.html', {'res': res})
-    
 
-def email_alert( subject, body, to):
-        msg = EmailMessage()
-        msg.set_content(body)
-        msg['subject'] = subject
-        msg['to'] = to
 
-        user= 'agroxtech22@gmail.com'
-        password= 'hmerhasoomdrgurk'
-        msg['from']= user
+def email_alert(subject, body, to):
+    msg = EmailMessage()
+    msg.set_content(body)
+    msg['subject'] = subject
+    msg['to'] = to
 
-        server= smtplib.SMTP('smtp.gmail.com', 587)
-        server.starttls()
-        server.login(user, password)
-        server.send_message(msg)
+    user = 'agroxtech22@gmail.com'
+    password = 'hmerhasoomdrgurk'
+    msg['from'] = user
 
-        server.quit()
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.starttls()
+    server.login(user, password)
+    server.send_message(msg)
+
+    server.quit()
 
 
 def labs(request):
