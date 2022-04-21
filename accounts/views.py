@@ -7,8 +7,7 @@ from django.contrib import auth
 
 # Create your views here.
 
-def get_email():
-    return email
+
 
 def register(request):
     global email

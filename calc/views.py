@@ -4,7 +4,7 @@ from django.http import HttpResponse
 import smtplib
 from email.message import EmailMessage
 
-from accounts.views import get_email
+
 
 # Create your views here.
 
@@ -276,23 +276,24 @@ def add(request):
     res = max(crops, key=crops.get)
     
     email = request.user.email
+    first_name=request.user.first_name
     print(email)
     
 
     if res == 'wheat':
-        email_alert("Hey", "wheat", email)
+        email_alert(f"Hey,{first_name}", "wheat", email)
 
     elif res == 'maize':
-        email_alert("Hey", "maize", email)
+        email_alert(f"Hey,{first_name}", "maize", email)
 
     elif res == 'paddy':
-        email_alert("Hey", "paddy", email)
+        email_alert(f"Hey,{first_name}", "paddy", email)
 
     elif res == 'cotton':
-        email_alert("Hey", "cotton", email)
+        email_alert(f"Hey,{first_name}", "cotton", email)
 
     elif res == 'jowar':
-        email_alert("Hey", "jowar", email)
+        email_alert(f"Hey,{first_name}", "jowar", email)
 
     return render(request, 'result.html', {'res': res})
 
