@@ -279,21 +279,23 @@ def add(request):
     first_name=request.user.first_name
     print(email)
     
+    with open("../templates/result.html") as f:
+        content = f.read()
 
     if res == 'wheat':
-        email_alert(f"Hey,{first_name}", "wheat", email)
+        email_alert("Hey", content, email)
 
     elif res == 'maize':
-        email_alert(f"Hey,{first_name}", "maize", email)
+        email_alert("Hey", content, email)
 
     elif res == 'paddy':
-        email_alert(f"Hey,{first_name}", "paddy", email)
+        email_alert("Hey", content, email)
 
     elif res == 'cotton':
-        email_alert(f"Hey,{first_name}", "cotton", email)
+        email_alert("Hey", content, email)
 
     elif res == 'jowar':
-        email_alert(f"Hey,{first_name}", "jowar", email)
+        email_alert("Hey", content, email)
 
     return render(request, 'result.html', {'res': res})
 
