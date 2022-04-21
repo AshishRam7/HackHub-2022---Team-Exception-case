@@ -274,12 +274,10 @@ def add(request):
     # wheat final
 
     res = max(crops, key=crops.get)
-
+    
     email = get_email()
-<<<<<<< HEAD
-=======
     print(email)
->>>>>>> 6279af720e9e5db60af172c33ef3e171ba9f08e7
+    
 
     if res == 'wheat':
         email_alert("Hey", "wheat", email)
