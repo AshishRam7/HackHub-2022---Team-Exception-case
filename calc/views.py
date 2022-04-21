@@ -276,22 +276,22 @@ def add(request):
 
     res = max(crops, key=crops.get)
 
-    email = get_email()
+    
 
     if res == 'wheat':
-        email_alert("Hey", "wheat", email)
-
+            email_alert("Hey",res,"jaashishram7@gmail.com")
+        
     elif res == 'maize':
-        email_alert("Hey", "maize", email)
+            email_alert("Hey",res,"jaashishram7@gmail.com")
 
     elif res == 'paddy':
-        email_alert("Hey", "paddy", email)
-
+            email_alert("Hey",res,"jaashishram7@gmail.com")
+            
     elif res == 'cotton':
-        email_alert("Hey", "cotton", email)
-
+            email_alert("Hey",res,"jaashishram7@gmail.com")
+    
     elif res == 'jowar':
-        email_alert("Hey", "jowar", email)
+            email_alert("Hey",res,"jaashishram7@gmail.com")
 
     return render(request, 'result.html', {'res': res})
 
