@@ -278,9 +278,9 @@ def add(request):
     email = request.user.email
     first_name=request.user.first_name
     print(email)
-    
+    '''
     with open("../templates/result.html") as f:
-        content = f.read()
+        content = f.read()'''
 
     if res == 'wheat':
         email_alert("Hey", content, email)
